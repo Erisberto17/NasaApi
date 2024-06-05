@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+
 
 import HomePage from './HomePage'
 
@@ -7,6 +7,8 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 
 import { Nunito } from "next/font/google";
+
+import { Analytics } from "@vercel/analytics/react"
 
 
 
