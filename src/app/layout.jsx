@@ -1,8 +1,3 @@
-<<<<<<< HEAD:src/app/layout.jsx
-
-=======
->>>>>>> 8206d2d4f37e37a90741b890fee4ba0970a40f1e:src/app/layout.js
-
 import HomePage from './HomePage'
 
 import "./globals.css";
@@ -10,8 +5,6 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 
 import { Nunito } from "next/font/google";
-
-import { Analytics } from "@vercel/analytics/react"
 
 
 
