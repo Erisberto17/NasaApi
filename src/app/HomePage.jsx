@@ -13,7 +13,6 @@ export default function HomePage () {
     return (
 
         < body className=" max-w-[100%]">
-        
         <Header />
     
         
