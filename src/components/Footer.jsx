@@ -21,7 +21,7 @@ export default function Footer() {
     return (
 
         <>
-        <footer className="bg-[#190619] w-full h-90 m-0 p-4 font-nunito">
+        <footer className="bg-[#190619] relative float-end w-full h-90 m-0 p-4 font-nunito">
             <div className="flex items-center justify-evenly m-0 p-10 pt-16 text-[18px] font-nunito">
                 <ul className="text-white flex-1 justify-evenly m-0">
                     <li>Projeto Utilizando a <b><a href="https://api.nasa.gov/">API da Nasa</a></b> </li>

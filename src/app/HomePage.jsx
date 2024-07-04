@@ -1,11 +1,10 @@
-/* eslint-disable react/no-unescaped-entities */
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ImageDiary from "@/components/ImageDiary";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer";
+import ImageDiary from "../components/ImageDiary";
 import Image from "next/image";
 
-import universo from '@/assets/Universo.png'
-import telescopio from '@/assets/Telescopio.png'
+import universo from '../assets/Universo.png'
+import telescopio from '../assets/Telescopio.png'
 
 export default function HomePage () {
 
@@ -37,7 +36,7 @@ export default function HomePage () {
             />
         </div>
         <ImageDiary />
-                <Footer />
+        <Footer />
 
 
         </ body>

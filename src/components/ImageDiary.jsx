@@ -49,23 +49,23 @@ export default function ImageDiary() {
       {dataList.map((data, index) => (
         <div key={index} className="flex-1 items-center text-center font-[helvetica] mb-10 mt-16">
           <button onClick={() => openModal(data.hdurl,data.explanation, data.date)}>
-            <p className="text-[40px] font-poppins font-meddium mb-5">Imagem do Dia</p>
+            <p className="text-[40px] font-poppins font-meddium mb-1">Imagem do Dia</p>
             <p className="text-[25px] font-nunito">{data.title}</p>
-            <div className='flex m-5'>
+            <div className='flex m-1'>
             {data.media_type == 'video' ? (
               
                 <ReactPlayer playing={true} controls={false} loop={true} light={true} url={data.url}/>
 
-            ) : data.media_type == 'image'(
+            ) : data.media_type == 'image' ? (
               
               <Image 
                 src={data.url}
                 alt="Diary image"
-                width={550}
+                width={500}
                 height={500}
                 className=" ml-5 "
               />
-            )}
+            ): null}
               <p
               className=" font-nunito text-[13px] max-w-[300px]"
               >{data.explanation}</p>
