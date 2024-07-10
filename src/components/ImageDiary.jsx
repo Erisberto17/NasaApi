@@ -47,28 +47,41 @@ export default function ImageDiary() {
   return (
     <>
       {dataList.map((data, index) => (
-        <div key={index} className="flex-1 items-center text-center font-[helvetica] mb-10 mt-16">
-          <button onClick={() => openModal(data.hdurl,data.explanation, data.date)}>
-            <p className="text-[40px] font-poppins font-meddium mb-1">Imagem do Dia</p>
-            <p className="text-[25px] font-nunito">{data.title}</p>
-            <div className='flex m-1'>
-            {data.media_type == 'video' ? (
-              
+        <div key={index} className="text-center font-[helvetica] mb-10 mt-10
+         sm:flex sm:p-0 sm:relative sm:left-7
+        ">
+          <button onClick={() => openModal(data.hdurl,data.explanation, data.date)} 
+            className="">
+            <p className="text-[40px] font-poppins font-meddium mb-1
+              sm:text-[1.6rem] sm:
+            ">Imagem do Dia</p>
+            <p className="text-[25px] font-nunito
+            ">{data.title}</p>
+            <div className='flex m-1 flex-wrap
+            sm:block sm:columns- sm:text-center
+            
+            '>
+              {data.media_type == 'video' ? (
+                
                 <ReactPlayer playing={true} controls={false} loop={true} light={true} url={data.url}/>
 
-            ) : data.media_type == 'image' ? (
-              
-              <Image 
-                src={data.url}
-                alt="Diary image"
-                width={500}
-                height={500}
-                className=" ml-5 "
-              />
-            ): null}
-              <p
-              className=" font-nunito text-[13px] max-w-[300px]"
-              >{data.explanation}</p>
+              ) : data.media_type == 'image' ? (
+                
+                <Image 
+                  src={data.url}
+                  alt="Diary image"
+                  width={500}
+                  height={500}
+                  className=" ml-5 
+                  sm:w-[300px] sm:h-[250px] sm:ml-0
+                  "
+                />
+              ): null}
+                <p
+                className=" font-nunito text-[13px] max-w-[300px]
+                  sm:text-[1rem] sm:line-clamp-5 sm:overflow-ellipsis
+                "
+                >{data.explanation}</p>
             </div>
           </button>
         </div>

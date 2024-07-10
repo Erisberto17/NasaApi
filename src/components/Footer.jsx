@@ -21,16 +21,24 @@ export default function Footer() {
     return (
 
         <>
-        <footer className="bg-[#190619] relative float-end w-full h-90 m-0 p-4 font-nunito">
-            <div className="flex items-center justify-evenly m-0 p-10 pt-16 text-[18px] font-nunito">
-                <ul className="text-white flex-1 justify-evenly m-0">
+        <footer className="bg-[#190619] relative float-end w-full h-90 m-0 p-4 font-nunito
+            sm:p-0 sm:float-none sm:w-[124.6%] sm:text-center
+        ">
+            <div className="flex items-center justify-evenly m-0 p-10 pt-16 text-[18px] font-nunito
+                sm:flex-wrap sm:p-4 sm:block 
+            ">
+                <ul className="text-white flex-1 justify-evenly m-0
+                    sm:w-[100%] sm:text-[1rem]
+                ">
                     <li>Projeto Utilizando a <b><a href="https://api.nasa.gov/">API da Nasa</a></b> </li>
 
                     <li><button onClick={() => openModal(['Estudante da Programação, buscando compreender melhor o uso das tecnologias. Github do projeto: https://github.com/Erisberto17/NasaProject'])}> Quem sou eu ? </button></li>
 
                     <li><button onClick={() => openModal(['Javascript, Next.js, Tailwind e Axios'])}>Tecnologias Usadas</button></li>
                 </ul>
-                <ul className="text-white">
+                <ul className="text-white
+                    sm:w-[100%] sm:text-center sm:mt-5 sm:text-[1rem]
+                ">
                     <li>
                         Projeto focado em consumir a api disponivel ao publico da nasa, <br />
                         usando apenas a documentação fornecida pela mesma
@@ -43,7 +51,7 @@ export default function Footer() {
                         <button onClick={closeModal} className="text-[#f8b1b1] z-10 fixed bottom-[39%] right-[25%]">X</button>
                         <p className=" fixed right-[25%] bottom-[25%] flex items-center justify-center w-[600px] text-center p-3 h-28 bg-[#686868] text-[#f3f3f3] rounded-sm font-poppins text-[17px]">{res}</p>
 
-                        </div>
+                    </div>
                 </div>
 
                     ))}
