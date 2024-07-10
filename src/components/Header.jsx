@@ -22,7 +22,7 @@ export default function Header () {
                 />
                 <div
                  className="text-[#1a0d19] flex justify-between ml-[30px] mr-10 gap-5 font-bold  text-[1.2em] gap-[82px] 
-                    sm:mr-20
+                    sm:mr-[11rem]
                  ">
                         
                 </div>

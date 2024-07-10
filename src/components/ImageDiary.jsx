@@ -48,7 +48,7 @@ export default function ImageDiary() {
     <>
       {dataList.map((data, index) => (
         <div key={index} className="text-center font-[helvetica] mb-10 mt-10
-         sm:flex sm:p-0 sm:relative sm:left-7
+         sm:flex sm:p-0 sm:relative sm:left-[6rem]
         ">
           <button onClick={() => openModal(data.hdurl,data.explanation, data.date)} 
             className="">

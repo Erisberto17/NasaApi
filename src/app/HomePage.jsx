@@ -41,7 +41,7 @@ export default function HomePage () {
                 width={520}
                 height={520}
                 className=" relative right-10 top-40
-                sm:w-[200px] sm:top-[-2em] sm:left-24
+                 sm:top-[-2em] sm:left-24
                 "
                 
             />
