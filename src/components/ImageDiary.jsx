@@ -7,7 +7,7 @@ import ReactPlayer from "react-player";
 
 export default function ImageDiary() {
   const [dataList, setDataList] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [iMdodalOpen, setIMdodalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedDescription, setSelectedDescription] = useState(null);
   const [selectedData, setSelectedData] = useState(null);
@@ -30,14 +30,14 @@ export default function ImageDiary() {
   const openModal = (image, description, data) => {
     setSelectedImage(image);
     setSelectedDescription(description);
-    setIsModalOpen(true);
+    setIMdodalOpen(true);
     setSelectedData(data);
 
     
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
+    setIMdodalOpen(false);
     setSelectedImage(null);
     setSelectedDescription(null);
     setSelectedData(null);
@@ -48,17 +48,17 @@ export default function ImageDiary() {
     <>
       {dataList.map((data, index) => (
         <div key={index} className="text-center font-[helvetica] mb-10 mt-10
-         sm:flex sm:p-0 sm:relative sm:left-[6rem]
+         md:flex md:p-0 md:relative justify-center
         ">
           <button onClick={() => openModal(data.hdurl,data.explanation, data.date)} 
             className="">
             <p className="text-[40px] font-poppins font-meddium mb-1
-              sm:text-[1.6rem] sm:
+              md:text-[1.6rem] md:
             ">Imagem do Dia</p>
             <p className="text-[25px] font-nunito
             ">{data.title}</p>
-            <div className='flex m-1 flex-wrap
-            sm:block sm:columns- sm:text-center
+            <div className='flex m-1 flex-wrap justify-center
+            md:block md:columns- md:text-center relative left-[20%] translate-x-[-10%]
             
             '>
               {data.media_type == 'video' ? (
@@ -73,13 +73,13 @@ export default function ImageDiary() {
                   width={500}
                   height={500}
                   className=" ml-5 
-                  sm:w-[300px] sm:h-[250px] sm:ml-0
+                  md:w-[300px] md:h-[250px] md:ml-0
                   "
                 />
               ): null}
                 <p
                 className=" font-nunito text-[13px] max-w-[300px]
-                  sm:text-[1rem] sm:line-clamp-5 sm:overflow-ellipsis
+                  md:text-[1rem] md:line-clamp-5 md:overflow-ellipsis
                 "
                 >{data.explanation}</p>
             </div>
@@ -87,7 +87,7 @@ export default function ImageDiary() {
         </div>
       ))}
 
-      {isModalOpen && selectedImage && (
+      {iMdodalOpen && selectedImage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
           <div className="relative bg-[#2e3033f0] p-2 rounded">
             <button

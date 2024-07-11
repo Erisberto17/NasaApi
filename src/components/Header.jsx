@@ -32,7 +32,7 @@ export default function Header () {
                     " >|||</p>
                 </div>
             </header>
-            <hr className="  border-[1px] border-[#0000003d] sm:w-[124.2%]"/>
+            <hr className="  border-[100%] border-[#0000003d] "/>
              
             
         </>
