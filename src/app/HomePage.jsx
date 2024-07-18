@@ -17,31 +17,29 @@ export default function HomePage () {
     
         
         <div className="
-        font-[helvetica] flex items-center justify-around relative top-9
-        mm:justify-center top-16 md:block
+        font-[helvetica] flex items-center relative top-9 text-center justify-center max-w-[100%] md:flex-wrap
         ">
 
             <Image 
                 src={universo}
                 alt="Universe"
-                width={500}
-                height={500}
-                className="relative bottom-6 max-w-[50%]
-                 sm:bottom-12 sm:mt-4
+                width={400}
+                height={400}
+                className="relative bottom-6 max-w-[30%]
+                 sm:bottom-12 sm:mt-4 md:max-w-[50%]
                              "
             />
-            <h1 className=" font-medium font-poppins text-center  text-[37px] m-0
-                relative bottom-10 right-10
-                sm:text-[1.3rem] sm:flex-wrap sm:ml-6 sm:left-8 md:mt-10
+            <h1 className=" font-medium font-poppins text-center text-[2rem] mt-7 m-0 mb-[10%]
+                
+                sm:text-[1.3rem] sm:flex-wrap sm:ml-6 sm:left-8 md:mt-10 md:text-[1.6rem]
             ">
                     A nasa dispoem de suas informações, e nós mastigamos para você</h1> 
             <Image 
                 src={telescopio}
-                alt="Universe"
-                width={520}
-                height={520}
-                className=" relative right-10 top-40 max-w-[50%]
-                 sm:top-[-2em] sm:left-24 md:top-0 md:left-28
+                alt="telescopio"
+                width={450}
+                className=" relative max-w-[30%] md:max-w-[50%] top-10
+                 sm:top-[-2em] sm:left-24 md:top-0
                 "
                 
             />
