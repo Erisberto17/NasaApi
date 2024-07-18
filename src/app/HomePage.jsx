@@ -12,7 +12,7 @@ export default function HomePage () {
     return (
 
         < body className=" max-w-[100%] 
-        sm:w-[62.5%] sm:items-center m-0 ">
+        m-0 ">
         <Header />
     
         

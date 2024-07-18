@@ -64,13 +64,13 @@ export default function ImageDiary() {
               ">{data.title}</p>
               <div className='flex m-1 flex-wrap justify-center
               md:block md:columns- md:text-center relative left-[20%] translate-x-[-10%]
-              
+               sm:translate-x-0 sm:m-0 sm:left-0
               '>
                 {data.media_type == 'video' ? (
                   
                   <ReactPlayer playing={true} controls={false} loop={true} light={true} url={data.url} 
-                  className='ml-5 
-                    md:w-[200px] md:ml-0 max-w-[50%]' />
+                  className='
+                    md:w-[200px] md:ml-0 max-w-[50%] sm:ml-10' />
 
                 ) : data.media_type == 'image' ? (
                   
@@ -79,13 +79,13 @@ export default function ImageDiary() {
                     alt="Diary image"
                     width={500}
                     height={500}
-                    className=" ml-5 
-                    md:w-[300px] md:h-[250px] md:ml-0
+                    className="
+                    md:w-[300px] md:h-[250px] md:ml-0 sm:ml-10
                     "
                   />
                 ): null}
                   <p
-                  className=" font-nunito text-[13px] max-w-[300px]
+                  className=" font-nunito text-[13px] max-w-[300px] sm:ml-10
                     md:text-[1rem] md:line-clamp-5 md:overflow-ellipsis
                   "
                   >{data.explanation}</p>
