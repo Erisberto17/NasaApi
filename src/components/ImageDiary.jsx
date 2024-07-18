@@ -47,30 +47,22 @@ export default function ImageDiary() {
   return (
     <>
       {dataList.map((data, index) => (
-        <div key={index} className=" font-[helvetica] mb-10 mt-10 flex justify-center
-         p-0
-        ">
+        <div key={index} className=" font-[helvetica] mb-10 mt-10 flex justify-center p-0">
           <button onClick={() => openModal(data.hdurl,data.explanation, data.date)} 
             className=" text-center">
-            <p className="text-[2rem] font-poppins font-meddium mb-1
-             
-            ">Imagem do Dia</p>
-            <div 
-            className=" flex-1 flex-wrap justify-center text-center p-0 m-0 relative lg:right-[6rem] md:right-0
-              
-            ">
+            <p className="text-[2rem] font-poppins font-meddium mb-1">Imagem do Dia</p>
+            <div className=" flex-1 flex-wrap justify-center text-center p-0 m-0 relative lg:right-[6rem] md:right-0">
 
-              <p className="text-[1.6rem] font-nunito flex-1 md:left-10 relative lg:left-[20%] lg:translate-x-[-10%]
-              ">{data.title}</p>
-              <div className='flex m-1 flex-wrap justify-center
-              md:block md:columns- md:text-center relative left-[20%] translate-x-[-10%]
-               sm:translate-x-0 sm:m-0 sm:left-0
-              '>
+              <p className="text-[1.6rem] font-nunito flex-1 md:left-10 relative lg:left-[20%] lg:translate-x-[-10%]">
+                {data.title}
+              </p>
+              <div className='flex m-1 flex-wrap justify-center relative left-[20%] translate-x-[-10%]
+                  md:block md:columns- md:text-center
+                  sm:translate-x-0 sm:m-0 sm:left-0'>
                 {data.media_type == 'video' ? (
                   
                   <ReactPlayer playing={true} controls={false} loop={true} light={true} url={data.url} 
-                  className='
-                    md:w-[200px] md:ml-0 max-w-[50%] sm:ml-10' />
+                  className='md:w-[200px] md:ml-0 max-w-[50%] sm:ml-10' />
 
                 ) : data.media_type == 'image' ? (
                   
@@ -80,14 +72,12 @@ export default function ImageDiary() {
                     width={500}
                     height={500}
                     className="
-                    md:w-[300px] md:h-[250px] md:ml-0 sm:ml-10
-                    "
+                    md:w-[300px] md:h-[250px] md:ml-0 sm:ml-10"
                   />
                 ): null}
                   <p
                   className=" font-nunito text-[13px] max-w-[300px] sm:ml-10
-                    md:text-[1rem] md:line-clamp-5 md:overflow-ellipsis
-                  "
+                    md:text-[1rem] md:line-clamp-5 md:overflow-ellipsis"
                   >{data.explanation}</p>
               </div>
 
@@ -101,10 +91,8 @@ export default function ImageDiary() {
           <div className="relative bg-[#2e3033f0] p-2 rounded">
             <button
               onClick={closeModal}
-              className="absolute top-[3px] right-2 m-2 text-white text-shadow z-51"
-            >
-              X
-            </button>
+              className="absolute top-[3px] right-2 m-2 text-white text-shadow z-51"> X </button>
+
             <Image
               src={selectedImage}
               alt="Image"
@@ -114,7 +102,7 @@ export default function ImageDiary() {
             <p
              className="text-[10px] gap-7 absolute bottom-4 font-bold text-[#ffffff96] opacity-0 transition-opacity hover:opacity-[100%] m-2 text-shadow"
             >{selectedDescription}</p>
-            <p className="text-[#abababe6] font-[helvetica]">Foto tirada em: {selectedData}</p>
+            <p className="text-[#abababe6] font-[helvetica]"> Foto tirada em: {selectedData}</p>
 
           </div>
         </div>
