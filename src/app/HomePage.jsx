@@ -5,6 +5,8 @@ import Image from "next/image";
 
 import universo from '../assets/Universo.png'
 import telescopio from '../assets/Telescopio.png'
+import background from '../assets/background.jpg'
+import EarthGlobe from "@/components/EarthGlobe.jsx";
 
 export default function HomePage () {
 
@@ -12,31 +14,20 @@ export default function HomePage () {
     return (
 
         < body className=" max-w-[100%] m-0 ">
+            <div>
+                <Image 
+                    src={background}
+                    width={400}
+                    height={200}
+                    className="sm:relative sm:bottom-40 z-1"
+                />
+                <h1 className="text-white z-3 relative bottom-[30.5rem] left-2 text-[3rem] leading-[2.5rem] font-bold font-poppins tracking-tighter   ">Qual curiosidade quer ver hoje?</h1>
+                <div className=" m-0 w-[100%] h-[25rem] bg-white rounded-[1.1rem] relative bottom-[30rem] z-2">
+                    <p className="font-poppins relative left-2 top-2 font-semibold text-[1.1rem]">Site utilizando Api publica da <a href="#" className="text-[#6f0785]">NASA</a>. Mastigando toda informação</p>
+                    <EarthGlobe />
+                </div>
 
-        <Header />
-    
-        <div className="font-[helvetica] flex items-center relative top-9 text-center justify-center max-w-[100%] md:flex-wrap">
-
-            <Image 
-                src={universo}
-                alt="Universe"
-                width={400}
-                height={400}
-                className="relative bottom-6 max-w-[30%] sm:bottom-12 sm:mt-4 md:max-w-[50%]"
-            />
-            <h1 className="font-medium font-poppins text-center text-[2rem] mt-7 m-0 mb-[10%] sm:text-[1.3rem] sm:flex-wrap sm:ml-6 sm:left-8 md:mt-10 md:text-[1.6rem]"
-            >A nasa dispoem de suas informações, e nós mastigamos para você</h1> 
-            <Image 
-                src={telescopio}
-                alt="telescopio"
-                width={450}
-                className=" relative max-w-[30%] md:max-w-[50%] top-10 sm:top-[-2em] sm:left-24 md:top-0"
-            />
-        </div>
-
-        <ImageDiary />
-
-        <Footer />
+            </div>
 
         </ body>
 );

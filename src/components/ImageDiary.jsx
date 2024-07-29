@@ -19,7 +19,6 @@ export default function ImageDiary() {
       .get("https://api.nasa.gov/planetary/apod?api_key=sdHwzNisgns87pzxMTulTuoReebx3u6hhsbw6DDv")
       .then((result) => {
         const data = result.data;
-        console.log(data);
         setDataList([data]); 
       })
       .catch((err) => {
@@ -58,11 +57,11 @@ export default function ImageDiary() {
               </p>
               <div className='flex m-1 flex-wrap justify-center relative left-[20%] translate-x-[-10%]
                   md:block md:columns- md:text-center
-                  sm:translate-x-0 sm:m-0 sm:left-0'>
+                  '>
                 {data.media_type == 'video' ? (
                   
                   <ReactPlayer playing={true} controls={false} loop={true} light={true} url={data.url} 
-                  className='md:w-[200px] md:ml-0 max-w-[50%] sm:ml-10' />
+                  className='md:w-[200px] md:ml-0 max-w-[50%]' />
 
                 ) : data.media_type == 'image' ? (
                   
@@ -72,11 +71,11 @@ export default function ImageDiary() {
                     width={500}
                     height={500}
                     className="
-                    md:w-[300px] md:h-[250px] md:ml-0 sm:ml-10"
+                    md:w-[300px] md:h-[250px] md:ml-0"
                   />
                 ): null}
                   <p
-                  className=" font-nunito text-[13px] max-w-[300px] sm:ml-10
+                  className=" font-nunito text-[13px] max-w-[300px]
                     md:text-[1rem] md:line-clamp-5 md:overflow-ellipsis"
                   >{data.explanation}</p>
               </div>
